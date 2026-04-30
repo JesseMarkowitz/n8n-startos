@@ -82,6 +82,7 @@ Two interfaces on port 5678, both available via LAN, .onion, and clearnet:
 
 ## Actions (StartOS UI)
 
+- **Complete Owner Account Setup** -- Reminds you to open the Web UI and finish n8n's first-run owner-account wizard. Paired with the install-time task. Visibility: enabled. Availability: any status. Input: none. Output: confirmation message.
 - **Set Primary URL** -- Choose the hostname n8n uses for webhooks. Visibility: enabled. Availability: any status. Input: URL select. Output: confirmation.
 - **Manage SMTP** -- Configure email (disabled/system/custom). Visibility: enabled. Availability: any status. Input: SMTP form. Output: confirmation.
 - **Reset User Management** -- Recover from forgotten owner password by returning to setup wizard state. Visibility: enabled. Availability: only stopped. Input: none. Output: confirmation message.
@@ -186,6 +187,7 @@ startos_managed_env_vars:
   - N8N_SMTP_SENDER
   - N8N_SMTP_SSL
 actions:
+  - complete-setup
   - set-primary-url
   - manage-smtp
   - reset-user-management
