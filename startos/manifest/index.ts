@@ -1,25 +1,25 @@
 import { setupManifest } from '@start9labs/start-sdk'
-import { long, short } from './i18n'
+import { short, long, alertInstall } from './i18n'
 
 export const manifest = setupManifest({
-  id: 'hello-world',
-  title: 'Hello World',
-  license: 'MIT',
-  packageRepo: 'https://github.com/Start9Labs/hello-world-startos',
-  upstreamRepo: 'https://github.com/Start9Labs/hello-world',
-  marketingUrl: 'https://start9.com/',
-  donationUrl: 'https://donate.start9.com/',
-  docsUrls: ['https://github.com/Start9Labs/hello-world/blob/master/README.md'],
+  id: 'n8n',
+  title: 'n8n',
+  license: 'SustainableUseLicense',
+  packageRepo: 'https://github.com/JesseMarkowitz/n8n-startos',
+  upstreamRepo: 'https://github.com/n8n-io/n8n',
+  marketingUrl: 'https://n8n.io',
+  donationUrl: null,
+  docsUrls: ['https://docs.n8n.io'],
   description: { short, long },
   volumes: ['main'],
   images: {
-    'hello-world': {
-      source: { dockerTag: 'ghcr.io/start9labs/hello-world:2.0.0' },
-      arch: ['x86_64', 'aarch64', 'riscv64'],
+    n8n: {
+      source: { dockerTag: 'docker.n8n.io/n8nio/n8n:2.17.8' },
+      arch: ['x86_64', 'aarch64'],
     },
   },
   alerts: {
-    install: null,
+    install: alertInstall,
     update: null,
     uninstall: null,
     restore: null,

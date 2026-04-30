@@ -1,5 +1,6 @@
 {
-  "name": "hello-world-startos",
+  "name": "n8n-startos",
+  "version": "2.17.8",
   "scripts": {
     "build": "rm -rf ./javascript && ncc build startos/index.ts -o ./javascript",
     "prettier": "prettier --write startos",

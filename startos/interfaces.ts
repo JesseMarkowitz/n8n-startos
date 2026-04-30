@@ -1,16 +1,17 @@
 import { i18n } from './i18n'
 import { sdk } from './sdk'
-import { uiPort } from './utils'
+import { n8nPort } from './utils'
 
 export const setInterfaces = sdk.setupInterfaces(async ({ effects }) => {
-  const uiMulti = sdk.MultiHost.of(effects, 'ui-multi')
-  const uiMultiOrigin = await uiMulti.bindPort(uiPort, {
+  const multi = sdk.MultiHost.of(effects, 'web')
+  const origin = await multi.bindPort(n8nPort, {
     protocol: 'http',
   })
+
   const ui = sdk.createInterface(effects, {
     name: i18n('Web UI'),
     id: 'ui',
-    description: i18n('The web interface of Hello World'),
+    description: i18n('n8n workflow editor and dashboard'),
     type: 'ui',
     masked: false,
     schemeOverride: null,
@@ -19,7 +20,19 @@ export const setInterfaces = sdk.setupInterfaces(async ({ effects }) => {
     query: {},
   })
 
-  const uiReceipt = await uiMultiOrigin.export([ui])
+  const api = sdk.createInterface(effects, {
+    name: i18n('REST API & Webhooks'),
+    id: 'api',
+    description: i18n(
+      'Programmatic access and webhook endpoints for external services (e.g. GitHub, Stripe triggers). Use this URL when configuring external services to call your n8n instance.',
+    ),
+    type: 'api',
+    masked: false,
+    schemeOverride: null,
+    username: null,
+    path: '',
+    query: {},
+  })
 
-  return [uiReceipt]
+  return [await origin.export([ui, api])]
 })
