@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.png" alt="n8n Logo" width="21%">
+  <img src="icon.svg" alt="n8n Logo" width="21%">
 </p>
 
 # n8n on StartOS
