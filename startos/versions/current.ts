@@ -13,6 +13,8 @@ export const current = VersionInfo.of({
 - n8n now refuses to save new or edited workflows that use deprecated nodes.
 - Many node and editor fixes across the ten intervening releases.
 
+Adds Forward Email to the SMTP provider presets.
+
 Full notes: https://github.com/n8n-io/n8n/releases`,
     es_ES: `n8n actualizado de 2.42.5 a 2.43.7.
 
@@ -23,6 +25,8 @@ Full notes: https://github.com/n8n-io/n8n/releases`,
 - El editor muestra de quién es la credencial que usa un nodo, permite a otros cambiar a la suya propia y detiene Ejecutar y Publicar cuando la credencial no es tuya.
 - n8n ahora se niega a guardar flujos de trabajo nuevos o editados que usen nodos obsoletos.
 - Numerosas correcciones en nodos y en el editor a lo largo de las diez versiones intermedias.
+
+Añade Forward Email a los proveedores SMTP predefinidos.
 
 Notas completas: https://github.com/n8n-io/n8n/releases`,
     de_DE: `n8n von 2.42.5 auf 2.43.7 aktualisiert.
@@ -35,6 +39,8 @@ Notas completas: https://github.com/n8n-io/n8n/releases`,
 - n8n verweigert jetzt das Speichern neuer oder bearbeiteter Workflows, die veraltete Knoten verwenden.
 - Zahlreiche Korrekturen an Knoten und am Editor über die zehn dazwischenliegenden Versionen.
 
+Fügt Forward Email zu den vordefinierten SMTP-Anbietern hinzu.
+
 Vollständige Hinweise: https://github.com/n8n-io/n8n/releases`,
     pl_PL: `Zaktualizowano n8n z wersji 2.42.5 do 2.43.7.
 
@@ -46,6 +52,8 @@ Vollständige Hinweise: https://github.com/n8n-io/n8n/releases`,
 - n8n odmawia teraz zapisania nowych lub edytowanych przepływów pracy, które używają przestarzałych węzłów.
 - Liczne poprawki węzłów i edytora w dziesięciu pośrednich wydaniach.
 
+Dodaje Forward Email do predefiniowanych dostawców SMTP.
+
 Pełne informacje: https://github.com/n8n-io/n8n/releases`,
     fr_FR: `n8n mis à jour de 2.42.5 vers 2.43.7.
 
@@ -56,6 +64,8 @@ Pełne informacje: https://github.com/n8n-io/n8n/releases`,
 - L'éditeur indique à qui appartient l'identifiant utilisé par un nœud, permet aux autres de passer au leur et bloque Exécuter et Publier lorsque l'identifiant ne vous appartient pas.
 - n8n refuse désormais d'enregistrer des workflows nouveaux ou modifiés qui utilisent des nœuds obsolètes.
 - De nombreuses corrections de nœuds et de l'éditeur sur les dix versions intermédiaires.
+
+Ajoute Forward Email aux fournisseurs SMTP prédéfinis.
 
 Notes complètes : https://github.com/n8n-io/n8n/releases`,
   },
